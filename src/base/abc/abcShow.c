@@ -404,7 +404,7 @@ void Abc_ShowFile( char * FileNameDot, int fKeepDot )
     {
         char CommandPs[1000];
         if ( !fKeepDot ) unlink( FileNameDot );
-        sprintf( CommandPs,  "%s %s &", pGsNameUnix, FileNamePs ); 
+        sprintf( CommandPs,  "%s %s 2>/dev/null &", pGsNameUnix, FileNamePs ); 
 #if defined(__wasm)
         if ( 1 )
 #else
